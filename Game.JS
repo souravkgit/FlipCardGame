@@ -6,7 +6,7 @@ var active = true;
 var front_name = document.querySelectorAll(".container");
 front_name.forEach(f => {
     var temp = Math.floor(Math.random() * names.length);
-    f.querySelector(".front").innerHTML = "<br><br>" + names[temp];
+    f.querySelector(".front").innerHTML = "<br>" + names[temp];
     names.splice(temp, 1);
 });
 var count = 0;

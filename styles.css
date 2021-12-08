@@ -3,11 +3,13 @@
     padding: 0;
 }
 
-.body {
+body {
     background: url(./game.gif);
-    background-size: cover;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
     font-family: 'Mate SC', serif !important;
-    transition: all 0.5s;
 }
 
 .main {
@@ -36,7 +38,7 @@
     height: 100%;
     background-color: rgba(31, 38, 135, 0.37);
     color: gold;
-    font-size: 25px;
+    font-size: 35px;
     transform: rotateY(180deg);
     display: flex;
     justify-content: center;

@@ -13,8 +13,8 @@ body {
 }
 
 .main {
-    height: 760px;
-    width: 750px;
+    height: 50%;
+    width: 50%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;

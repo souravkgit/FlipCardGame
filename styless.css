@@ -17,6 +17,7 @@ body{
     background-color: honeydew;
     border-color: red;
     color: green;
+    text-shadow: 6px 0 6px;
     box-shadow: 6px 6px 6px;
 }
 .top{

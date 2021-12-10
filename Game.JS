@@ -1,14 +1,48 @@
-var names = [
-  "Sourav",
-  "Sarvesh",
-  "Puneet",
-  "Ashish",
-  "Carry",
-  "Amit",
-  "Anubhav",
-  "Abhishek",
-];
+function reloadin()
+{
+  location.replace("./index.html");
+}
+function myfun()
+{
+  var names = [
+    "Sourav",
+    "Sarvesh",
+    "Puneet",
+    "Ashish",
+    "Carry",
+    "Vishnu",
+    "Rohit",
+    "Grahil",
+  ];
+  var namestr = document.querySelectorAll("[id='name']");  
+  var namelist = [];
+  for (let index = 0; index < namestr.length; index++) {
+    const element = namestr[index];
+    namelist.push(element.value)
+  }
+  if (namelist.length>8){
+    return;
+  }
+  for (let index = 0; index < namelist.length; index++) {
+    const element = namelist[index];
+    if (element==''){
+      namelist.splice(index);
+    }
+  }
+  console.log(namelist)
+  var Index = 0;
+  for (let index = namelist.length; index < 8; index++) 
+  {
+    namelist.push(names[Index]);
+    Index++;
+  }
+  console.log(namelist)
+  sessionStorage.setItem("Name", namelist);
+  location.replace("./index2.html");
+}
+var names = (sessionStorage.getItem("Name")).split(',');
 names = [...names, ...names];
+console.log(names);
 var matches = 0;
 var active = true;
 
@@ -63,6 +97,8 @@ front_name.forEach((f) => {
     }
   });
 });
+
+
 
 setInterval(() => {
   if (matches === 8) {

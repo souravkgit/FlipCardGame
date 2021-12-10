@@ -16,7 +16,7 @@ body{
     flex-direction: column;
     background-color: honeydew;
     border-color: red;
-    color: red;
+    color: green;
     box-shadow: 6px 6px 6px;
 }
 .top{
